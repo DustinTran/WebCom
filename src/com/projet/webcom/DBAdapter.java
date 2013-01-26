@@ -108,4 +108,5 @@ public class DBAdapter {
         valeurs.put(KEY_EXPCB_USER, "");
         return db.insert(TABLE_USERS, null, valeurs);
     }
+    // MERGEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 }
