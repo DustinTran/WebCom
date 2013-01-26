@@ -2,11 +2,16 @@
 <resources>
 
     <string name="app_name">WebCom</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
-    <string-array name="ListePrincipale">
+    <string name="nom">Nom</string>
+    <string name="prenom">Prenom</string>
+    <string name="adresseEmail">Adresse e-mail</string><string-array name="ListePrincipale">
         <item >Accueil</item>
         <item >Mon compte</item>
     </string-array>
+    
+    <string name="enregistrer">Enregistrer</string>
+    <string name="password">Mot de passe</string>
+    <string name="adresse">Adresse</string>
+    <string name="Telephone">telephone</string>
 
 </resources>
