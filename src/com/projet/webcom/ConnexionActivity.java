@@ -1,16 +1,29 @@
 package com.projet.webcom;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
-public class AjoutuserActivity extends Activity {
-	  
+public class ConnexionActivity extends Activity
+{
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_ajoutuser);
+		setContentView(R.layout.activity_connexion);
+		
+		Button btCreerCompte = (Button) findViewById(R.id.buttonCreateCompte);
+		btCreerCompte.setOnClickListener(new Button.OnClickListener()
+		{
+			public void onClick(View arg0)
+			{
+				Intent intent = new Intent(ConnexionActivity.this, AjoutuserActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu)

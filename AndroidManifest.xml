@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name="AjoutuserActivity"></activity>
+        <activity android:name="ConnexionActivity"></activity>
     </application>
 
 </manifest>

@@ -20,7 +20,7 @@ import android.widget.EditText;
  
 public class CreerCompteActivity extends Activity {
 	// Progress Dialog
-    private ProgressDialog pDialog;
+   /* private ProgressDialog pDialog;
  
     JSONParser jsonParser = new JSONParser();
     EditText inputNom;
@@ -58,5 +58,5 @@ public class CreerCompteActivity extends Activity {
                 new CreateNewProduct().execute();
             }
         });
-    }
+    }*/
 }
