@@ -4,6 +4,9 @@
     <string name="app_name">WebCom</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="hello">test</string>
+    <string-array name="ListePrincipale">
+        <item >Accueil</item>
+        <item >Mon compte</item>
+    </string-array>
 
 </resources>
