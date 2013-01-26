@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBAdapter {
-	// Données des utilisateurs
+	// Donnees des utilisateurs
 	public static final String KEY_ID_USER = "_id_user";
 	public static final String KEY_NOM_USER = "nom_user";
 	public static final String KEY_PRENOM_USER = "prenom_user";
@@ -19,7 +19,7 @@ public class DBAdapter {
 	public static final String KEY_CRYPTOCB_USER = "cryptocb_user";
 	public static final String KEY_EXPCB_USER = "expcb_user";
 
-	// Données des articles
+	// Donnees des articles
 	public static final String KEY_ID_ART = "_id_art";
 	public static final String KEY_NOM_ART = "nom_art";
 	public static final String KEY_SHORTDESC_ART = "shortdesc_art";
@@ -28,16 +28,16 @@ public class DBAdapter {
 	public static final String KEY_QTE_ART = "qte_art";
 	public static final String KEY_ARTID_CAT = "artid_cat";
 
-	// Données des photos des articles
+	// Donnees des photos des articles
 	public static final String KEY_ID_PHOTO = "_id_photo";
 	public static final String KEY_NOM_PHOTO = "nom_photo";
 	public static final String KEY_ARTID_PHOTO = "artid_photo";
 
-	// Données des catégories
+	// Donnees des categories
 	public static final String KEY_ID_CAT = "_id_cat";
 	public static final String KEY_NOM_CAT = "nom_cat";
 
-	// Données des commandes
+	// Donnees des commandes
 	public static final String KEY_ID_COM = "_id_com";
 	public static final String KEY_NOMUSER_COM = "nomuser_com";
 	public static final String KEY_PRENOMUSER_COM = "prenomuser_com";
@@ -50,29 +50,29 @@ public class DBAdapter {
 	public static final String KEY_USERID_COM = "userid_com";
 	public static final String KEY_PANID_COM = "panid_com";
 
-	// Données des commentaires
+	// Donnees des commentaires
 	public static final String KEY_ID_COMS = "_id_coms";
 	public static final String KEY_TEXTE_COMS = "teluser_coms";
 	public static final String KEY_ARTID_COMS = "artid_coms";
 	public static final String KEY_USERID_COMS = "userid_coms";
 
-	// Données des articles liés au panier
+	// Donnees des articles liés au panier
 	public static final String KEY_ID_PANART = "_id_panart";
 	public static final String KEY_QTEART_PANART = "qteart_panart";
 	public static final String KEY_PRIXART_PANART = "artid_panart";
 	public static final String KEY_ARTID_PANART = "artid_panart";
 
-	// Données du panier
+	// Donnees du panier
 	public static final String KEY_ID_PAN = "_id_pan";
 	public static final String KEY_PRIX_PAN = "prix_pan";
 
-	// Données globales de la base
+	// Donnees globales de la base
 	private static final String TAG = "DBAdapter";	
 	private static final String DATABASE_NAME = "base";
 	private static final String DATABASE_TABLE = "utilisateurs";
 	private static final int DATABASE_VERSION = 1;
 
-	// Création des tables
+	// Creation des tables
 	private static final String TABLE_USERS =
 			"create table if not exists users (_id_user integer primary key autoincrement, "
 					+ "nom_user text not null, prenom_user text not null, " 
@@ -94,7 +94,7 @@ public class DBAdapter {
 		DBHelper.close();
 	}
 	
-	// Insérer un utilisateur
+	// Inserer un utilisateur
     public long insertUser(String id, String nom, String prenom, String email, String adresse, String tel, String numcb, String cryptocb, String expcb) {
         ContentValues valeurs = new ContentValues();
         valeurs.put(KEY_ID_USER, id);
