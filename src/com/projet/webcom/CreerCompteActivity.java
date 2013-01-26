@@ -1,6 +1,10 @@
 package com.projet.webcom;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/Francois
 =======
  
 >>>>>>> origin/Francois
@@ -10,16 +14,22 @@ import java.util.List;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.json.*;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 =======
+=======
+>>>>>>> origin/Francois
 import org.json.JSONException;
 import org.json.JSONObject;
  
 import android.app.Activity;
 import android.app.ProgressDialog;
+<<<<<<< HEAD
+>>>>>>> origin/Francois
+=======
 >>>>>>> origin/Francois
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -28,6 +38,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 public class CreerCompteActivity extends Activity {
@@ -46,6 +57,8 @@ public class CreerCompteActivity extends Activity {
     // URL du webservice pour ajouter un compte utilisateur
     private static String url_ajout_user = "localhost/android/user/add_user.php";
 =======
+=======
+>>>>>>> origin/Francois
  
 public class CreerCompteActivity extends Activity {
 	// Progress Dialog
@@ -61,6 +74,9 @@ public class CreerCompteActivity extends Activity {
  
     // url to create new product
     private static String url_create_product = "localhost/android/user/create_user.php";
+<<<<<<< HEAD
+>>>>>>> origin/Francois
+=======
 >>>>>>> origin/Francois
  
     // JSON Node names
@@ -69,6 +85,7 @@ public class CreerCompteActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
 <<<<<<< HEAD
         setContentView(R.layout.activity_ajoutuser);
  
@@ -167,6 +184,8 @@ public class CreerCompteActivity extends Activity {
  
     }
 =======
+=======
+>>>>>>> origin/Francois
         setContentView(R.layout.add_product);
  
         // Edit Text
@@ -187,5 +206,8 @@ public class CreerCompteActivity extends Activity {
             }
         });
     }
+<<<<<<< HEAD
+>>>>>>> origin/Francois
+=======
 >>>>>>> origin/Francois
 }
