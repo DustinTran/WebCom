@@ -2,10 +2,16 @@ package com.projet.webcom;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+<<<<<<< HEAD
+=======
+import android.view.View;
+>>>>>>> origin/Francois
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 
 public class AccueilActivity extends Activity
@@ -29,15 +35,36 @@ public class AccueilActivity extends Activity
 //		Spinner spinner = (Spinner) findViewById(R.id.spinner);
 //		spinner.setOnItemSelectedListener(this);
 //		// fichier de test commit
+<<<<<<< HEAD
+=======
+		 Button btEnregistrer = (Button) findViewById(R.id.button1);
+		    btEnregistrer.setOnClickListener(new Button.OnClickListener(){
+		      public void onClick(View arg0) {
+		    	  Intent intent = new Intent(AccueilActivity.this, AjoutuserActivity.class);
+		  		startActivity(intent);
+		      }
+		  });
+		
+>>>>>>> origin/Francois
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu){
 	    super.onCreateOptionsMenu(menu);
 	    MenuItem item = menu.add("Accueil");
 	    item.setIcon(R.drawable.ic_menu_accueil);
+<<<<<<< HEAD
 	    item = menu.add("Panier");
 	    item.setIcon(R.drawable.ic_menu_panier);
 	    
+=======
+	    item = menu.add("Rechercher");
+	    item.setIcon(R.drawable.ic_menu_panier);
+	    item = menu.add("Panier");
+	    //item.setIcon(R.drawable.ic_menu_rechercher);
+	    item = menu.add("Votre compte");
+	    //item.setIcon(R.drawable.ic_menu_compte);
+	    item = menu.add("Autre");
+>>>>>>> origin/Francois
 	    return true;
 	}
 

@@ -11,6 +11,15 @@
         android:orientation="vertical"
         tools:context=".AccueilActivity" >
 
+<<<<<<< HEAD
+=======
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enregistrer" />
+
+>>>>>>> origin/Francois
     </LinearLayout>
 
 </ScrollView>
