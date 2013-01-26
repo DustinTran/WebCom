@@ -46,9 +46,13 @@ public class AccueilActivity extends Activity
 	    super.onCreateOptionsMenu(menu);
 	    MenuItem item = menu.add("Accueil");
 	    item.setIcon(R.drawable.ic_menu_accueil);
-	    item = menu.add("Panier");
+	    item = menu.add("Rechercher");
 	    item.setIcon(R.drawable.ic_menu_panier);
-	    
+	    item = menu.add("Panier");
+	    //item.setIcon(R.drawable.ic_menu_rechercher);
+	    item = menu.add("Votre compte");
+	    //item.setIcon(R.drawable.ic_menu_compte);
+	    item = menu.add("Autre");
 	    return true;
 	}
 
