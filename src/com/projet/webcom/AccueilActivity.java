@@ -2,10 +2,13 @@ package com.projet.webcom;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 
 public class AccueilActivity extends Activity
@@ -29,6 +32,14 @@ public class AccueilActivity extends Activity
 //		Spinner spinner = (Spinner) findViewById(R.id.spinner);
 //		spinner.setOnItemSelectedListener(this);
 //		// fichier de test commit
+		 Button btEnregistrer = (Button) findViewById(R.id.button1);
+		    btEnregistrer.setOnClickListener(new Button.OnClickListener(){
+		      public void onClick(View arg0) {
+		    	  Intent intent = new Intent(AccueilActivity.this, AjoutuserActivity.class);
+		  		startActivity(intent);
+		      }
+		  });
+		
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu){

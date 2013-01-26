@@ -13,5 +13,7 @@
     <string name="password">Mot de passe</string>
     <string name="adresse">Adresse</string>
     <string name="Telephone">telephone</string>
+    <string name="hello_world">WebCom</string>
+    <string name="menu_settings">Settings</string>
 
 </resources>
