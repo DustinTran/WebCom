@@ -21,6 +21,7 @@ public class AccueilActivity extends Activity {
 		adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 		
 		listViewPrincipal.setAdapter(adapter);
+		//fichier de test commit
 	}
 
 	@Override
