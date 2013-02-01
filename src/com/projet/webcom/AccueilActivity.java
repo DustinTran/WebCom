@@ -8,6 +8,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import android.view.View;
+>>>>>>> origin/Francois
 =======
 import android.view.View;
 >>>>>>> origin/Francois
@@ -41,7 +45,10 @@ public class AccueilActivity extends Activity
 //		// fichier de test commit
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/Francois
 =======
 >>>>>>> origin/Francois
 		 Button btEnregistrer = (Button) findViewById(R.id.button1);
@@ -53,6 +60,9 @@ public class AccueilActivity extends Activity
 		  });
 		
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/Francois
+=======
 >>>>>>> origin/Francois
 =======
 >>>>>>> origin/Francois
@@ -64,10 +74,13 @@ public class AccueilActivity extends Activity
 	    item.setIcon(R.drawable.ic_menu_accueil);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    item = menu.add("Panier");
 	    item.setIcon(R.drawable.ic_menu_panier);
 	    
 =======
+=======
+>>>>>>> origin/Francois
 =======
 >>>>>>> origin/Francois
 	    item = menu.add("Rechercher");
@@ -78,6 +91,9 @@ public class AccueilActivity extends Activity
 	    //item.setIcon(R.drawable.ic_menu_compte);
 	    item = menu.add("Autre");
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/Francois
+=======
 >>>>>>> origin/Francois
 =======
 >>>>>>> origin/Francois

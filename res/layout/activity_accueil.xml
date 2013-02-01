@@ -13,7 +13,10 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/Francois
 =======
 >>>>>>> origin/Francois
         <Button
@@ -23,6 +26,9 @@
             android:text="@string/enregistrer" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/Francois
+=======
 >>>>>>> origin/Francois
 =======
 >>>>>>> origin/Francois
