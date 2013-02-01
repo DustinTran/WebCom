@@ -12,8 +12,18 @@
     <string name="enregistrer">Enregistrer</string>
     <string name="password">Mot de passe</string>
     <string name="adresse">Adresse</string>
+<<<<<<< HEAD
     <string name="Telephone">telephone</string>
     <string name="hello_world">WebCom</string>
     <string name="menu_settings">Settings</string>
+=======
+    <string name="telephone">Télephone</string>
+    <string name="hello_world">WebCom</string>
+    <string name="menu_settings">Settings</string>
+    <string name="seePassword">Afficher le mot de passe</string>
+    <string name="forgotPassword">Vous avez oublié votre mot de passe?</string>
+    <string name="connexion">Connexion (serveur sécurisé)</string>
+    <string name="createCompte">Créer compte</string>
+>>>>>>> origin/Francois
 
 </resources>

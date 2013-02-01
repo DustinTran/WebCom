@@ -44,7 +44,11 @@
             android:id="@+id/editTextTelUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:hint="@string/Telephone"
+=======
+            android:hint="@string/telephone"
+>>>>>>> origin/Francois
             android:inputType="phone" />
 
         <EditText

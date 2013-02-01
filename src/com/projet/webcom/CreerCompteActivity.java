@@ -1,13 +1,20 @@
 package com.projet.webcom;
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> origin/Francois
 import java.util.ArrayList;
 import java.util.List;
  
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+<<<<<<< HEAD
 import org.json.*;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+=======
+>>>>>>> origin/Francois
 import org.json.JSONException;
 import org.json.JSONObject;
  
@@ -20,6 +27,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+<<<<<<< HEAD
 
 public class CreerCompteActivity extends Activity {
  
@@ -40,6 +48,12 @@ public class CreerCompteActivity extends Activity {
 public class CreerCompteActivity extends Activity {
 	// Progress Dialog
     private ProgressDialog pDialog;
+=======
+ 
+public class CreerCompteActivity extends Activity {
+	// Progress Dialog
+   /* private ProgressDialog pDialog;
+>>>>>>> origin/Francois
  
     JSONParser jsonParser = new JSONParser();
     EditText inputNom;
@@ -58,6 +72,7 @@ public class CreerCompteActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
         setContentView(R.layout.activity_ajoutuser);
  
         // On recupere les champs
@@ -154,6 +169,8 @@ public class CreerCompteActivity extends Activity {
         }
  
     }
+=======
+>>>>>>> origin/Francois
         setContentView(R.layout.add_product);
  
         // Edit Text
@@ -173,5 +190,9 @@ public class CreerCompteActivity extends Activity {
                 new CreateNewProduct().execute();
             }
         });
+<<<<<<< HEAD
     }
+=======
+    }*/
+>>>>>>> origin/Francois
 }

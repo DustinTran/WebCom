@@ -23,6 +23,10 @@
             </intent-filter>
         </activity>
         <activity android:name="AjoutuserActivity"></activity>
+<<<<<<< HEAD
+=======
+        <activity android:name="ConnexionActivity"></activity>
+>>>>>>> origin/Francois
     </application>
 
 </manifest>
