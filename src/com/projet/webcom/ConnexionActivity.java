@@ -20,7 +20,7 @@ public class ConnexionActivity extends Activity
 		{
 			public void onClick(View arg0)
 			{
-				Intent intent = new Intent(ConnexionActivity.this, AjoutuserActivity.class);
+				Intent intent = new Intent(ConnexionActivity.this, AjoutUserActivity.class);
 				startActivity(intent);
 			}
 		});

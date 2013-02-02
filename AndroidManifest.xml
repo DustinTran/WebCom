@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="AjoutuserActivity"></activity>
+        <activity android:name="com.projet.webcom.AjoutUserActivity"></activity>
         <activity android:name="ConnexionActivity"></activity>
     </application>
 

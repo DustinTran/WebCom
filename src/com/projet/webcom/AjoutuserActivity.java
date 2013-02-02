@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,9 +19,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class AjoutuserActivity extends Activity {
+public class AjoutUserActivity extends Activity {
 	// Barre de progression
 	private ProgressDialog progression;
 
@@ -33,8 +35,8 @@ public class AjoutuserActivity extends Activity {
 	EditText inputPasswd;
 
 	// URL du webservice pour ajouter un compte utilisateur / lire
-	private static String url_ajout_compte = "http://10.0.2.2:8080/android/user/add_user.php";
-	private static String url_creer_compte = "http://10.0.2.2:8080/android/user/create_user.php";
+	private static String url_ajout_compte = "http://172.25.1.83:80/android/add_user.php";
+	private static String url_creer_compte = "http://172.25.1.83:80/android/create_user.php";
 
 	private static final String TAG_SUCCESS = "success";
 
@@ -68,7 +70,7 @@ public class AjoutuserActivity extends Activity {
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
-			progression = new ProgressDialog(AjoutuserActivity.this);
+			progression = new ProgressDialog(AjoutUserActivity.this);
 			progression.setMessage("Votre compte est en cours de creation...");
 			progression.setIndeterminate(false);
 			progression.setCancelable(true);
@@ -99,22 +101,22 @@ public class AjoutuserActivity extends Activity {
 			JSONObject json = jsonParser.makeHttpRequest(url_ajout_compte, "POST", params);
 
 			// Log
-			//Log.d("Create Response", json.toString());
-
-			// Si le compte a bien ete cree
+			Log.d("Reponse JSON", json.toString());
 			try {
 				int success = json.getInt(TAG_SUCCESS);
 
+				// Si le compte a bien ete cree
 				if (success == 1) {
 					// Si le compte a bien ete cree
-					/*Intent i = new Intent(getApplicationContext(), AccueilActivity.class);
-                    	startActivity(i);*/
-
+					Intent intentAccueil = new Intent(getApplicationContext(), AccueilActivity.class);
+                	startActivity(intentAccueil);
+			
 					// On ferme la fenêtre d'ajout
 					finish();
 				} 
+				// Si le compte n'a pas ete cree
 				else {
-					// Si le compte n'a pas ete cree
+					Log.d("reponse json", json.toString());
 				}
 			}
 			catch (JSONException e) {

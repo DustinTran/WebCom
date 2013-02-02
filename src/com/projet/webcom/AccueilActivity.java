@@ -39,7 +39,7 @@ public class AccueilActivity extends Activity
 		{
 			public void onClick(View arg0)
 			{
-				Intent intent = new Intent(AccueilActivity.this, AjoutuserActivity.class);
+				Intent intent = new Intent(AccueilActivity.this, AjoutUserActivity.class);
 				startActivity(intent);
 			}
 		});

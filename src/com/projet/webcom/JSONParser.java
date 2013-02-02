@@ -10,11 +10,15 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -38,13 +42,14 @@ public class JSONParser {
 		try {
 			// On verifie le type de requete
 			if(method == "POST") {
-				DefaultHttpClient httpClient = new DefaultHttpClient();
+				HttpParams httpParams = new BasicHttpParams();
+				HttpConnectionParams.setConnectionTimeout(httpParams, 15000);
+				HttpConnectionParams.setSoTimeout(httpParams, 15000);
+				HttpClient httpClient = new DefaultHttpClient();
 				HttpPost httpPost = new HttpPost(url);
-				Log.d("url", httpPost.getURI().toString());
+				httpPost.setParams(httpParams);
 				httpPost.setEntity(new UrlEncodedFormEntity(params));
-				Log.d("httppost", httpPost.getEntity().getContent().toString());
 				HttpResponse httpResponse = httpClient.execute(httpPost);
-				Log.d("params", httpPost.getURI().toString());
 				HttpEntity httpEntity = httpResponse.getEntity();
 				is = httpEntity.getContent();
 			}
@@ -78,6 +83,7 @@ public class JSONParser {
 			}
 			is.close();
 			json = sb.toString();
+			Log.d("champs", sb.toString());
 		}
 		catch (Exception e) {
 			Log.e("Buffer Error", "Error converting result" + e.toString());
