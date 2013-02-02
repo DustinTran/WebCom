@@ -8,8 +8,6 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.projet.webcom.NouveauCompteActivity.CreerNouveauCompteActivity;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
