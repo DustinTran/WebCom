@@ -14,7 +14,7 @@ public class ConnexionActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_connexion);
-		
+
 		Button btCreerCompte = (Button) findViewById(R.id.buttonCreateCompte);
 		btCreerCompte.setOnClickListener(new Button.OnClickListener()
 		{

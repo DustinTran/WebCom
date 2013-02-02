@@ -7,6 +7,7 @@
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -23,10 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name="AjoutuserActivity"></activity>
-<<<<<<< HEAD
-=======
         <activity android:name="ConnexionActivity"></activity>
->>>>>>> origin/Francois
     </application>
 
 </manifest>
