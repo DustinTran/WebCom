@@ -1,17 +1,21 @@
 package com.projet.webcom;
 
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.ActionBarSherlock;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.internal.widget.ActionBarView;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
+
+
 import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ExpandableListView;
 
-public class AccueilActivity extends Activity
+public class AccueilActivity extends SherlockActivity
 {
 
 	@Override
@@ -19,21 +23,6 @@ public class AccueilActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_accueil);
-
-		// ExpandableListView listViewPrincipal = (ExpandableListView)
-		// findViewById(R.id.expandableListView1);
-		//
-		// ArrayAdapter<CharSequence> adapter =
-		// ArrayAdapter.createFromResource(this, R.array.ListePrincipale,
-		// android.R.layout.simple_spinner_item);
-		//
-		// adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		//
-		// listViewPrincipal.setAdapter(adapter);
-		//
-		// Spinner spinner = (Spinner) findViewById(R.id.spinner);
-		// spinner.setOnItemSelectedListener(this);
-		// // fichier de test commit
 		Button btCreerCompte = (Button) findViewById(R.id.button1);
 		btCreerCompte.setOnClickListener(new Button.OnClickListener()
 		{
@@ -55,20 +44,20 @@ public class AccueilActivity extends Activity
 		});
 
 	}
-
-	public boolean onCreateOptionsMenu(Menu menu)
-	{
-		super.onCreateOptionsMenu(menu);
-		MenuItem item = menu.add("Accueil");
-		item.setIcon(R.drawable.ic_menu_rechercher);
-		item = menu.add("Rechercher");
-		item.setIcon(R.drawable.ic_menu_accueil);
-		item = menu.add("Panier");
-		item.setIcon(R.drawable.ic_menu_panier);
-		item = menu.add("Votre compte");
-		item.setIcon(R.drawable.ic_menu_compte);
-		item = menu.add("Autre");
-		return true;
-	}
-
+	
+	@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+		com.actionbarsherlock.view.MenuInflater inflater = getSupportMenuInflater();
+		inflater.inflate(R.menu.activity_accueil, menu);
+		return super.onCreateOptionsMenu(menu);
+    }
+	
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+         switch (item.getItemId()) {
+         case R.id.accueil:
+        	 return true;
+         }
+         return false;
+     }
 }

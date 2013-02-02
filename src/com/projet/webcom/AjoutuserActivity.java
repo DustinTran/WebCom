@@ -35,7 +35,7 @@ public class AjoutUserActivity extends Activity {
 	EditText inputPasswd;
 
 	// URL du webservice pour ajouter un compte utilisateur
-	private static String url_ajout_compte = "http://172.25.1.83:80/android/add_user.php";
+	private static String url_ajout_compte = "http://172.25.1.83:80/android/create_account.php";
 
 	// Reponse du serveur
 	private static final String TAG_SUCCESS = "success";
