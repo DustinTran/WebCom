@@ -31,20 +31,18 @@ public class JSONParser {
 	static String json = "";
 	
 	// Constructeur
-	public JSONParser() {
-		
+	public JSONParser() {		
 	}
 	
-	// On recupere la reponse json a partir d'une url
-	// via une requete HTTP POST / GET
+	// On cree la requete http (en GET ou POST)
 	public JSONObject makeHttpRequest(String url, String method, List<NameValuePair> params) {
-		// Requete HTTP
 		try {
-			// On verifie le type de requete
+			HttpParams httpParams = new BasicHttpParams();
+			HttpConnectionParams.setConnectionTimeout(httpParams, 10000);
+			HttpConnectionParams.setSoTimeout(httpParams, 10000);
+			
+			// Si requete GET
 			if(method == "POST") {
-				HttpParams httpParams = new BasicHttpParams();
-				HttpConnectionParams.setConnectionTimeout(httpParams, 15000);
-				HttpConnectionParams.setSoTimeout(httpParams, 15000);
 				HttpClient httpClient = new DefaultHttpClient();
 				HttpPost httpPost = new HttpPost(url);
 				httpPost.setParams(httpParams);
@@ -53,13 +51,13 @@ public class JSONParser {
 				HttpEntity httpEntity = httpResponse.getEntity();
 				is = httpEntity.getContent();
 			}
-			
+			// Si requete POST
 			else if(method == "GET") {
 				DefaultHttpClient httpClient = new DefaultHttpClient();
 				String paramString = URLEncodedUtils.format(params, "utf8");
 				url += "?" + paramString;
 				HttpGet httpGet = new HttpGet(url);
-				Log.d("url", httpGet.getURI().toString());				
+				httpGet.setParams(httpParams);
 				HttpResponse httpResponse = httpClient.execute(httpGet);
 				HttpEntity httpEntity = httpResponse.getEntity();
 				is = httpEntity.getContent();
@@ -86,15 +84,15 @@ public class JSONParser {
 			Log.d("champs", sb.toString());
 		}
 		catch (Exception e) {
-			Log.e("Buffer Error", "Error converting result" + e.toString());
+			Log.e("Erreur du buffer (BufferedReader)", "Erreur de conversion de la reponse." + e.toString());
 		}
 		
-		// On tente de parser la reponse json
+		// On va parser les donnees pour les inserer dans la base de donnees
 		try {
 			jObj = new JSONObject(json);
 		}
 		catch (JSONException e) {
-			Log.e("JSON Parser", "Error parsing data" +e.toString());
+			Log.e("Erreur du parseur (JSONParser)", "Erreur lors du parsage des donnees." +e.toString());
 		}
 		return jObj;
 	}

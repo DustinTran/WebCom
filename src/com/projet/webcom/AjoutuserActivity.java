@@ -23,7 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class AjoutUserActivity extends Activity {
-	// Barre de progression
+	// Fentre de progression
 	private ProgressDialog progression;
 
 	JSONParser jsonParser = new JSONParser();
@@ -34,10 +34,10 @@ public class AjoutUserActivity extends Activity {
 	EditText inputTel;
 	EditText inputPasswd;
 
-	// URL du webservice pour ajouter un compte utilisateur / lire
+	// URL du webservice pour ajouter un compte utilisateur
 	private static String url_ajout_compte = "http://172.25.1.83:80/android/add_user.php";
-	private static String url_creer_compte = "http://172.25.1.83:80/android/create_user.php";
 
+	// Reponse du serveur
 	private static final String TAG_SUCCESS = "success";
 
 	@Override
@@ -61,12 +61,10 @@ public class AjoutUserActivity extends Activity {
 			}
 		});
 	}
-	
-	// On effectue l'ajout de l'utilisateur en fond
+
+	// On effectue la creation du compte dans un nouveau thread en tache fond
 	class CreerNouveauCompteActivity extends AsyncTask<String, String, String> { 
-		/*
-		 * On affiche la barre de progression
-		 */
+		// On affiche la fenetre de progression
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
@@ -77,9 +75,6 @@ public class AjoutUserActivity extends Activity {
 			progression.show();
 		}
 
-		/**
-		 * On cree le compte
-		 */
 		protected String doInBackground(String... args) {
 			String nom = inputNom.getText().toString();
 			String prenom = inputPrenom.getText().toString();
@@ -87,8 +82,6 @@ public class AjoutUserActivity extends Activity {
 			String email = inputEmail.getText().toString();
 			String tel = inputTel.getText().toString();
 			String passwd = inputPasswd.getText().toString();
-			
-			// Parametres
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("nom", nom));
 			params.add(new BasicNameValuePair("prenom", prenom));
@@ -100,23 +93,22 @@ public class AjoutUserActivity extends Activity {
 			// On cree la requete http (passage de parametres en "POST"
 			JSONObject json = jsonParser.makeHttpRequest(url_ajout_compte, "POST", params);
 
-			// Log
-			Log.d("Reponse JSON", json.toString());
 			try {
 				int success = json.getInt(TAG_SUCCESS);
 
 				// Si le compte a bien ete cree
 				if (success == 1) {
 					// Si le compte a bien ete cree
+					// A FAIRE : ramener l'utilisateur sur SA page "Mon compte" et non sur la page d'accueil comme actuellement
 					Intent intentAccueil = new Intent(getApplicationContext(), AccueilActivity.class);
-                	startActivity(intentAccueil);
-			
+					startActivity(intentAccueil);
+
 					// On ferme la fenêtre d'ajout
 					finish();
 				} 
 				// Si le compte n'a pas ete cree
 				else {
-					Log.d("reponse json", json.toString());
+					Log.d("Reponse JSON", json.toString());
 				}
 			}
 			catch (JSONException e) {
@@ -125,12 +117,8 @@ public class AjoutUserActivity extends Activity {
 
 			return null;
 		}
-
-		/*
-		 * On ferme le fenêtre montrant une barre de progression
-		 */
+		// On ferme la fenetre de progression
 		protected void onPostExecute(String file_url) {
-			// dismiss the dialog once done
 			progression.dismiss();
 		}
 	}
