@@ -1,28 +1,32 @@
 package com.projet.webcom;
 
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.ActionBarSherlock;
-import com.actionbarsherlock.app.SherlockActivity;
-import com.actionbarsherlock.internal.widget.ActionBarView;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
-
-
+import com.slidingmenu.lib.SlidingMenu;
 import android.os.Bundle;
+import android.app.Activity;
 import android.content.Intent;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 
-public class AccueilActivity extends SherlockActivity
-{
-
+public class AccueilActivity extends Activity
+{	
+	
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
+	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_accueil);
+		
+        // configure the SlidingMenu
+        SlidingMenu menu = new SlidingMenu(this);
+        menu.setMode(SlidingMenu.LEFT);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        menu.setFadeDegree(0.35f);
+        menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW);
+        menu.setMenu(R.layout.menu_fragment);
+		
+		// Boutons temporaires
 		Button btCreerCompte = (Button) findViewById(R.id.button1);
 		btCreerCompte.setOnClickListener(new Button.OnClickListener()
 		{
@@ -44,20 +48,12 @@ public class AccueilActivity extends SherlockActivity
 		});
 
 	}
-	
+
 	@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-		com.actionbarsherlock.view.MenuInflater inflater = getSupportMenuInflater();
-		inflater.inflate(R.menu.activity_accueil, menu);
-		return super.onCreateOptionsMenu(menu);
-    }
-	
-	@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-         switch (item.getItemId()) {
-         case R.id.accueil:
-        	 return true;
-         }
-         return false;
-     }
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.menu_fragment, menu);
+		super.onCreateOptionsMenu(menu);
+	    return true;
+	}
 }

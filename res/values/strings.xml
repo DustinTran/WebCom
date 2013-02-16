@@ -4,11 +4,13 @@
     <string name="app_name">WebCom</string>
     <string name="nom">Nom</string>
     <string name="prenom">Prenom</string>
-    <string name="adresseEmail">Adresse e-mail</string><string-array name="ListePrincipale">
-        <item >Accueil</item>
-        <item >Mon compte</item>
+    <string name="adresseEmail">Adresse e-mail</string>
+
+    <string-array name="ListePrincipale">
+        <item>Accueil</item>
+        <item>Mon compte</item>
     </string-array>
-    
+
     <string name="enregistrer">Enregistrer</string>
     <string name="password">Mot de passe</string>
     <string name="adresse">Adresse</string>
@@ -19,5 +21,7 @@
     <string name="forgotPassword">Vous avez oublié votre mot de passe?</string>
     <string name="connexion">Connexion (serveur sécurisé)</string>
     <string name="createCompte">Créer compte</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_menu_fragment">MenuFragment</string>
 
 </resources>
