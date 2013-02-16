@@ -1,8 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:id="@+id/menu_accueil_accueil" android:title="@string/MenuAccueil" android:showAsAction="ifRoom">
         <menu>
-			<item android:id="@+id/menu_accueil_compte" android:title="@string/MenuCompte" android:showAsAction="ifRoom"/>
-		    <item android:id="@+id/menu_accueil_panier" android:title="@string/MenuPanier" android:showAsAction="ifRoom"/>
+			<item android:id="@+id/menu_accueil_compte" android:title="@string/MenuCompte" android:icon="@drawable/ic_menu_compte" android:showAsAction="ifRoom"/>
+		    <item android:id="@+id/menu_accueil_panier" android:title="@string/MenuPanier" android:icon="@drawable/ic_menu_panier" android:showAsAction="ifRoom"/>
     	</menu>
     </item>
 </menu>

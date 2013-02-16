@@ -13,6 +13,7 @@ public class AccueilActivity extends SherlockActivity
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
+	    setTheme(R.style.SherlockTheme);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_accueil);
 				
