@@ -23,5 +23,8 @@
     <string name="createCompte">Créer compte</string>
     <string name="title_activity_test">TestActivity</string>
     <string name="title_activity_menu_fragment">MenuFragment</string>
+    <string name="MenuAccueil">Accueil</string>
+    <string name="MenuCompte">Mon compte</string>
+    <string name="MenuPanier">Mon panier</string>
 
 </resources>
